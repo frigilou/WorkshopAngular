@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">GameArena</a>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/gestion">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link">Subscribers<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Coaches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">LogOut</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid subscribers text-center">
+
+  <h1>List of Subscribers</h1>
+  <a routerLink="/AddSubscriber"><button class="text-center btn btn-info addbuttonsubscriber">Add User</button></a>
+  <div class="row">
+
+    <div class="col-md-4 col-lg-3 col-12 subscriber" *ngFor="let P of subscribers">
+      <div class="card">
+        <div class="photocontainer">
+          <img src="{{P.image}}" class=" photosprofile" alt="">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">User: {{P.firstname}} {{P.lastname}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Id user: {{P.id}}</li>
+          <li class="list-group-item">Email : {{P.email}}</li>
+          <li class="list-group-item">Phone number : {{P.phone}}</li>
+          <li class="list-group-item">Subscription end : {{P.subscription_end}}</li>
+        </ul>
+        <div class="card-body">
+          <button class="btn btn-danger" (click)="Delete_Subscriber(P.id)">Delete User</button>
+          <a [routerLink]="['/UpdateSubscriber',P.id]"> <button class="btn btn-warning buttonupadte">Update User</button></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

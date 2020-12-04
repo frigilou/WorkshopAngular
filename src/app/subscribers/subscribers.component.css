@@ -1,0 +1,39 @@
+.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar-brand{
+   color: #df2b1a;
+   font-weight: bold;
+}
+
+.subscribers{
+    margin-top: 40px;
+}
+
+.subscriber{
+    margin-top: 50px;
+}
+
+.photocontainer{
+    height: 360px;
+    width: 100%;
+}
+
+.photosprofile{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+.addbuttonsubscriber{
+    margin-top: 30px;
+    width: 300px;
+}
+
+.buttonupadte{
+    margin-left: 20px;
+}

@@ -1,0 +1,9 @@
+.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar-brand{
+   color: #df2b1a;
+   font-weight: bold;
+}
