@@ -34,4 +34,9 @@ export class SubscribersService {
   {
     return this.http.put<subscriber>(this.api+"/"+id,subscriber,this.httpOptions);
   }
+
+  AddSubscriber(subscriber:subscriber):Observable<subscriber>
+  {
+    return this.http.post<subscriber>(this.api,subscriber,this.httpOptions);
+  }
 }

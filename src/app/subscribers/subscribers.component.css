@@ -13,7 +13,7 @@
 }
 
 .subscriber{
-    margin-top: 50px;
+    margin-top: 80px;;
 }
 
 .photocontainer{
@@ -37,3 +37,13 @@
 .buttonupadte{
     margin-left: 20px;
 }
+
+.searchbyname{
+    margin-left: 35%;
+}
+
+.subscribers_titles{
+    text-transform: uppercase;
+    color: #df2b1a;
+}
+

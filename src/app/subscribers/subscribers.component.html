@@ -8,29 +8,31 @@
       <a class="navbar-brand" href="#">GameArena</a>
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item ">
-          <a class="nav-link" routerLink="/gestion">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="/gestion">Home</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link">Subscribers<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Coaches</a>
+          <a class="nav-link" routerLink="/coaches">Coaches</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/home">LogOut</a>
         </li>
       </ul>
+        <input class="form-control searchbyname" type="text" placeholder="Search by firstname" [(ngModel)]="firstname" (input)="Search()">
     </div>
   </div>
 </nav>
 
 <div class="container-fluid subscribers text-center">
 
-  <h1>List of Subscribers</h1>
-  <a routerLink="/AddSubscriber"><button class="text-center btn btn-info addbuttonsubscriber">Add User</button></a>
+  <h1 class="subscribers_titles">List of Subscribers</h1>
+  <a routerLink="/AddSubscriber"><button class="text-center btn btn-info addbuttonsubscriber">Add Subscriber</button></a>
+
   <div class="row">
 
-    <div class="col-md-4 col-lg-3 col-12 subscriber" *ngFor="let P of subscribers">
+    <div class="col-md-4 col-lg-3 col-12 subscriber" *ngFor="let P of subscribers" >
       <div class="card">
         <div class="photocontainer">
           <img src="{{P.image}}" class=" photosprofile" alt="">

@@ -1,43 +1,84 @@
 <div class="container-fluid">
+  
   <h1 class="titile text-center">User information</h1>
-
-  <form>
-    <div class="form-group">
-      <label>firstname</label>
-      <input type="text" class="form-control ">
-    </div>
-
+  <form #updateuserform="ngForm">
 
     <div class="form-group">
-      <label>lastname</label>
-      <input type="text" class="form-control">
+      <label class="labeels ">firstname</label>
+      <input type="text" class="form-control " name="firstname" [(ngModel)]="subscreiber.firstname" required
+        #firstname="ngModel">
     </div>
-
+    <div *ngIf="firstname.errors && firstname.touched">
+      <h3 class="alert alert-danger">firstname is required</h3>
+    </div>
+    
 
     <div class="form-group">
-      <label>date_of_birth</label>
-      <input type="text" class="form-control">
+      <label class="labeels">lastname</label>
+      <input type="text" class="form-control" name="lastname" [(ngModel)]="subscreiber.lastname " required
+        #lastname="ngModel">
     </div>
-
+    <div *ngIf="lastname.errors && lastname.touched">
+      <h3 class="alert alert-danger">lastname is required</h3>
+    </div>
 
     <div class="form-group">
-      <label>email</label>
-      <input type="email" class="form-control" placeholder="xxxx@yyy.zzz">
+      <label class="labeels">date_of_birth</label>
+      <input type="text" class="form-control" name="date_of_birth" [(ngModel)]="subscreiber.date_of_birth "
+        #date_of_birth="ngModel" required pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}">
     </div>
-
+    <div *ngIf="date_of_birth.errors && date_of_birth.touched">
+      <span *ngIf="date_of_birth.errors.required">
+        <h3 class="alert alert-danger">Date is required</h3>
+      </span>
+      <span *ngIf="date_of_birth.errors.pattern">
+        <h3 class="alert alert-danger">Date must be dd/mm/yyyy</h3>
+      </span>
+    </div>
 
     <div class="form-group">
-      <label>phone</label>
-        <input type=" number" class="form-control">
+      <label class="labeels">email</label>
+      <input type="email" class="form-control" placeholder="xxxx@yyy.zzz" name="email" [(ngModel)]="subscreiber.email"
+        #email="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
     </div>
-
+    <div *ngIf="email.errors">
+      <span *ngIf="email.errors.required && email.touched">
+        <h3 class="alert alert-danger">Email is required</h3>
+      </span>
+      <span *ngIf="email.errors.pattern">
+        <h3 class="alert alert-danger">Email not valid</h3>
+      </span>
+    </div>
 
     <div class="form-group">
-      <label>subscription_end</label>
-      <input type="text" class="form-control" placeholder="dd/MM/YYYY">
+      <label class="labeels">phone</label>
+      <input type="number" class="form-control" name="phone" [(ngModel)]="subscreiber.phone" #phone="ngModel" required
+        pattern="[0-9]{8}">
+    </div>
+    <div *ngIf="phone.errors && phone.touched">
+      <span *ngIf="phone.errors.required">
+        <h3 class="alert alert-danger">Phone number is required</h3>
+      </span>
+      <div *ngIf="phone.errors.pattern">
+        <h3 class="alert alert-danger">Phone number must be 8 number</h3>
+      </div>
     </div>
 
+    <div class="form-group">
+      <label class="labeels">subscription_end</label>
+      <input type="text" class="form-control" name="subscription_end" placeholder="dd/MM/YYYY"
+        [(ngModel)]="subscreiber.subscription_end" #subscription_end="ngModel" required
+        pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}">
+    </div>
+    <div *ngIf="subscription_end.errors && subscription_end.touched">
+      <span *ngIf="subscription_end.errors.required">
+        <h3 class="alert alert-danger">Date is required</h3>
+      </span>
+      <span *ngIf="subscription_end.errors.pattern">
+        <h3 class="alert alert-danger">Date must be dd/mm/yyyy</h3>
+      </span>
+    </div>
 
-    <button type="submit" class="btn btn-secondary">Add</button>
+    <button type="submit" class="btn btn-secondary updatebutton" [disabled]="updateuserform.invalid " (click)="AddSubscriber()">Add</button>
   </form>
 </div>

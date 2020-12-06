@@ -1,0 +1,45 @@
+.alert-danger{
+    height: 25px;
+    font-size: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.titile{
+    color: rgb(78, 74, 74);
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.updatebutton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 60px;
+    font-weight: bold;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+.labeels{
+    color:  rgb(78, 74, 74);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.container-fluid{
+    background-image: url(../../assets/img/../../assets/img/Upadate_subscriber.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

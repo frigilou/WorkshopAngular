@@ -1,0 +1,46 @@
+.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar-brand{
+    color: #df2b1a;
+    font-weight: bold;
+ }
+
+ .subscribers{
+    margin-top: 20px;
+}
+
+.addbuttonsubscriber{
+    margin-top: 30px;
+    width: 300px;
+}
+
+.coaches{
+    margin-top: 50px;
+}
+
+.search{
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-group{
+    width: 25%;
+    margin-left: 60px;
+    margin-right: 0px;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-success{
+    width: 30%;
+}
+
+.coaches_list{
+    text-transform: uppercase;
+    color: #df2b1a;
+}

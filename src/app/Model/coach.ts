@@ -6,4 +6,6 @@ export class coach{
     email:string;
     phone:number;
     specialty:string;
+    image:string;
+    Hours_work:number;
 }

@@ -1,0 +1,16 @@
+.photocontainer{
+    height: 360px;
+    width: 100%;
+}
+
+.buttonupadte{
+    margin-left: 20px;
+}
+
+.photosprofile{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+}
