@@ -77,7 +77,7 @@
       </span>
     </div>
 
-    <button type="submit" class="btn btn-secondary updatebutton" [disabled]="updateuserform.invalid"
+    <button type="submit" class="btn btn-secondary updatebutton" [disabled]="updateuserform.invalid  || updateuserform.untouched"
       (click)="UpdateSubscriber()">Update</button>
   </form>
 </div>

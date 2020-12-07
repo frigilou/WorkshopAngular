@@ -27,13 +27,17 @@ export class CoachesComponent implements OnInit {
     this.coachesservice.GetAllCoaches().subscribe(data => this.coaches = data);
   }
 
-  addedhours(id: number) {
+  addAbcense(id: number) {
     for (let i of this.coaches) {
       if (i.id === id) {
-        i.Hours_work = i.Hours_work + 4;
-        this.coachesservice.AddHours(i).subscribe(data => this.coachesservice.GetAllCoaches().subscribe(data => this.coaches = data));
+        this.coachesservice.AddAbcense(i).subscribe(data => this.coachesservice.GetAllCoaches().subscribe(data => this.coaches = data));
       }
     }
+  }
+
+  DeleteCoach(Coach:coach)
+  {
+    this.coachesservice.DeleteCoach(Coach).subscribe(data => this.coachesservice.GetAllCoaches().subscribe(data => this.coaches = data));
   }
 
   search(data: coach[]): coach[] {

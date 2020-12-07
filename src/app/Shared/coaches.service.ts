@@ -19,9 +19,30 @@ export class CoachesService {
     return this.http.get<coach[]>(this.api);
   }
 
-  AddHours(object:coach):Observable<coach>
+  AddAbcense(object:coach):Observable<coach>
   {
-     object.Hours_work+4;
+     object.Nombreabscense++;
      return this.http.put<coach>(this.api+"/"+object.id,object,this.httpOptions);
   }
+
+  DeleteCoach(object:coach):Observable<coach>
+  {
+    return this.http.delete<coach>(this.api+"/"+object.id,this.httpOptions);
+  }
+
+  UpdateCoach(Object:coach,id:number):Observable<coach>
+  {
+    return this.http.put<coach>(this.api+"/"+id,Object,this.httpOptions);
+  }
+
+  AddCoach(object:coach):Observable<coach>
+  {
+    return this.http.post<coach>(this.api,object,this.httpOptions);
+  }
+
+  GetCoachById(id:number):Observable<coach>
+  {
+    return this.http.get<coach>(this.api+"/"+id);
+  }
+
 }

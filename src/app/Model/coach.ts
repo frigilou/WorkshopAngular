@@ -7,5 +7,5 @@ export class coach{
     phone:number;
     specialty:string;
     image:string;
-    Hours_work:number;
+    Nombreabscense:number;
 }

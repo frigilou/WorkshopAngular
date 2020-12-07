@@ -11,6 +11,7 @@ export class CoachComponent implements OnInit {
 
   @Input() coach:coach;
   @Output() requested=new EventEmitter<Number>();
+  @Output() deleted=new EventEmitter<coach>();
 
   constructor() { }
 
@@ -20,6 +21,11 @@ export class CoachComponent implements OnInit {
   OnRequest()
   {
     this.requested.emit(this.coach.id);
+  }
+
+  DeleteCoach()
+  {
+    this.deleted.emit(this.coach)
   }
 
 }

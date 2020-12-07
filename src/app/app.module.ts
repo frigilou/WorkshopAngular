@@ -10,7 +10,10 @@ import { SubscribersComponent } from './subscribers/subscribers.component';
 import { UpdateSubscriberComponent } from './update-subscriber/update-subscriber.component';
 import { AddSubscriberComponent } from './add-subscriber/add-subscriber.component';
 import { CoachesComponent } from './coaches/coaches.component';
-import { CoachComponent } from './coach/coach.component'
+import { CoachComponent } from './coach/coach.component';
+import { AddCoachComponent } from './add-coach/add-coach.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import { UpdateCoachComponent } from './update-coach/update-coach.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +24,16 @@ import { CoachComponent } from './coach/coach.component'
     UpdateSubscriberComponent,
     AddSubscriberComponent,
     CoachesComponent,
-    CoachComponent
+    CoachComponent,
+    AddCoachComponent,
+    UpdateCoachComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

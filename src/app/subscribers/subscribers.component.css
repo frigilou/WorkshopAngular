@@ -47,3 +47,7 @@
     color: #df2b1a;
 }
 
+.username{
+    text-transform: uppercase;
+}
+

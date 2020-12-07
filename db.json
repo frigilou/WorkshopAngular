@@ -134,7 +134,7 @@
       "phone": 20123090,
       "specialty": "bodybuilding",
       "image": "../assets/img/coach_1.jpg",
-      "Hours_work": 82
+      "Nombreabscense": 2
     },
     {
       "id": 2,
@@ -145,7 +145,7 @@
       "phone": 21314567,
       "specialty": "bodybuilding",
       "image": "../assets/img/coach_2.jpg",
-      "Hours_work": 78
+      "Nombreabscense": 2
     },
     {
       "id": 3,
@@ -156,7 +156,7 @@
       "phone": 22987123,
       "specialty": "Aero",
       "image": "../assets/img/coach_3.jpg",
-      "Hours_work": 74
+      "Nombreabscense": 2
     },
     {
       "id": 4,
@@ -167,7 +167,7 @@
       "phone": 55213352,
       "specialty": "bodybuilding",
       "image": "../assets/img/coach_4.jpg",
-      "Hours_work": 70
+      "Nombreabscense": 2
     },
     {
       "id": 5,
@@ -178,7 +178,7 @@
       "phone": 22991882,
       "specialty": "Aero",
       "image": "../assets/img/coach_5.jpg",
-      "Hours_work": 74
+      "Nombreabscense": 3
     },
     {
       "id": 6,
@@ -189,7 +189,7 @@
       "phone": 96335652,
       "specialty": "bodypump",
       "image": "../assets/img/coach_6.jpg",
-      "Hours_work": 70
+      "Nombreabscense": 1
     },
     {
       "id": 7,
@@ -200,7 +200,7 @@
       "phone": 52001546,
       "specialty": "bodybuilding",
       "image": "../assets/img/coach_7.jpg",
-      "Hours_work": 74
+      "Nombreabscense": 2
     },
     {
       "id": 8,
@@ -211,7 +211,7 @@
       "phone": 22331442,
       "specialty": "Aero",
       "image": "../assets/img/coach_8.jpg",
-      "Hours_work": 74
+      "Nombreabscense": 1
     },
     {
       "id": 9,
@@ -222,7 +222,7 @@
       "phone": 98331442,
       "specialty": "bodypump",
       "image": "../assets/img/coach_9.jpg",
-      "Hours_work": 74
+      "Nombreabscense": 0
     }
   ]
 }

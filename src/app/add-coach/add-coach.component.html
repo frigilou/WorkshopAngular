@@ -1,0 +1,61 @@
+<div class="container-fluid">
+
+  <h1 class="titile text-center">Coach information</h1>
+
+  <form [formGroup]="coachdata">
+
+    <div class="form-group">
+      <label class="labeels">firstname</label>
+      <input type="text" class="form-control" formControlName="firstname" [(ngModel)]="entraineur.firstname">
+    </div>
+    <div *ngIf="coachdata.get('firstname').invalid && coachdata.get('firstname').touched" class="errorcontainer">
+      <h3 class="alert alert-danger">firstname is invalid</h3>
+    </div>
+
+    <div class="form-group">
+      <label class="labeels">lastname</label>
+      <input type="text" class="form-control" formControlName="lastname" [(ngModel)]="entraineur.lastname">
+    </div>
+    <div *ngIf="coachdata.get('lastname').invalid  && coachdata.get('lastname').touched" class="errorcontainer">
+      <h3 class="alert alert-danger">lastname is invalid</h3>
+    </div>
+
+    <div class="form-group">
+      <label class="labeels">date_of_birth</label>
+      <input type="text" class="form-control" formControlName="date_of_birth" [(ngModel)]="entraineur.date_of_birth">
+    </div>
+    <div *ngIf="coachdata.get('date_of_birth').invalid  && coachdata.get('date_of_birth').touched"
+      class="errorcontainer">
+      <h3 class="alert alert-danger">lastname is invalid</h3>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="labeels">email</label>
+      <input type="email" class="form-control" formControlName="email" [(ngModel)]="entraineur.email">
+    </div>
+    <div *ngIf="coachdata.get('email').invalid && coachdata.get('email').touched" class="errorcontainer">
+      <h3 class="alert alert-danger">email is invalid</h3>
+    </div>
+
+    <div class="form-group">
+      <label class="labeels">phone</label>
+      <input type="number" class="form-control" formControlName="phone" [(ngModel)]="entraineur.phone">
+    </div>
+    <div *ngIf="coachdata.get('phone').invalid && coachdata.get('phone').touched" class="errorcontainer">
+      <h3 class="alert alert-danger">phone is invalid</h3>
+    </div>
+
+    <div class="form-group">
+      <label class="labeels">Speciality</label>
+      <input type="text" class="form-control" formControlName="Speciality" [(ngModel)]="entraineur.specialty">
+    </div>
+    <div *ngIf="coachdata.get('Speciality').invalid && coachdata.get('Speciality').touched" class="errorcontainer">
+      <h3 class="alert alert-danger">Speciality is invalid</h3>
+    </div>
+
+    <button type="submit" class="btn btn-secondary" [disabled]="coachdata.invalid" (click)=" AddCoach()">Add</button>
+  </form>
+
+</div>

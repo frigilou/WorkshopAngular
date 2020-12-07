@@ -3,19 +3,17 @@
     <img src="{{coach.image}}" class=" photosprofile" alt="">
   </div>
   <div class="card-body">
-    <h5 class="card-title">User: {{coach.firstname}} {{coach.lastname}}</h5>
+    <h5 class="card-title coachname">{{coach.firstname}} {{coach.lastname}}</h5>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Id coach: {{coach.id}}</li>
     <li class="list-group-item">Email : {{coach.email}}</li>
     <li class="list-group-item">Phone number : {{coach.phone}}</li>
-    <li class="list-group-item">Date of birht : {{coach.date_of_birth}}</li>
     <li class="list-group-item">Speciality : {{coach.specialty}}</li>
-    <li class="list-group-item">Hours Worked : {{coach.Hours_work}}</li>
-    <li class="list-group-item"><button class="btn btn-success buttonupadte" (click)="OnRequest()">Add training session</button></li>
+    <li class="list-group-item">Absence : {{coach.Nombreabscense}}</li>
+    <li class="list-group-item"><button class="btn btn-success buttonupadte" (click)="OnRequest()">Add Absence</button></li>
   </ul>
   <div class="card-body">
-    <button class="btn btn-danger">Delete Coach</button>
-    <a><button class="btn btn-warning buttonupadte">Update Coach</button></a>
+    <button class="btn btn-danger" (click)=" DeleteCoach()">Delete Coach</button>
+    <a><button class="btn btn-warning buttonupadte" [routerLink]="['/UpdateCoach',coach.id]">Update Coach</button></a>
   </div>
 </div>
